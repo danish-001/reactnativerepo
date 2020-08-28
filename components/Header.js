@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'dodgerblue',
   },
   text: {
-    color: '#fff',
+    color: '#000',
     fontSize: 23,
     textAlign: 'center',
   },
