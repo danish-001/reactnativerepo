@@ -22,7 +22,7 @@ const AddItem = ({title, addItem}) => {
   };
 
   return (
-    <View>
+    <View style={styles.inputSection}>
       <TextInput
         placeholder="Add Items..."
         style={styles.input}
@@ -40,6 +40,9 @@ const AddItem = ({title, addItem}) => {
 };
 
 const styles = StyleSheet.create({
+  inputSection: {
+    display: 'inline-block',
+  },
   input: {
     height: 60,
     padding: 8,

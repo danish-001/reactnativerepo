@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {View, FlatList, Alert, StyleSheet} from 'react-native';
+import {
+  View,
+  FlatList,
+  Alert,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from 'react-native';
 // import {uuid} from 'uuidv4';
 
 import Header from './components/Header';
@@ -32,16 +39,18 @@ const App = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Header title="Shop It!" />
-      <AddItem addItem={addItem} />
-      <FlatList
-        data={items}
-        renderItem={({item}) => (
-          <ListItem item={item} deleteItem={deleteItem} />
-        )}
-      />
-    </View>
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      <View style={styles.container}>
+        <Header title="Shop It!" />
+        <AddItem addItem={addItem} />
+        <FlatList
+          data={items}
+          renderItem={({item}) => (
+            <ListItem item={item} deleteItem={deleteItem} />
+          )}
+        />
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 

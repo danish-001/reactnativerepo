@@ -22,9 +22,12 @@ const ListItem = ({item, deleteItem}) => {
 const styles = StyleSheet.create({
   listItem: {
     padding: 15,
+    margin: 5,
     backgroundColor: '#f8f8f8',
-    borderBottomWidth: 1,
-    borderColor: '#eee',
+    borderStyle: 'dashed',
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 10,
   },
   listItemView: {
     flexDirection: 'row',
